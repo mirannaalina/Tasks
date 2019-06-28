@@ -18,11 +18,31 @@ public class Arr1 {
 
         int[] ar = new int[]{1, 7, 25, 4, 19, 42, 5};
 
-        for (int i = 1; i < ar.length; i++) {
-            if (ar.length % i == 0) {
-                System.out.println(ar);
-            }
 
+        for (int i = 0; i < ar.length; i++) {
+            System.out.println(ar[i]);
+
+        }
+
+        System.out.println("multiples of 5");
+        for(int i =0; i<ar.length; i++){
+            if (ar[i] % 5 ==0){
+                System.out.println(ar[i]);
+            }
+        }
+
+        System.out.println("first multiple of 5");
+        for(int i = 0; i< ar.length;i++){
+            if(ar[i] % 5 !=0) {
+                System.out.println(ar[i]);
+            }
+        }
+
+        System.out.println("last multiple of 5");
+        for(int i= ar.length -1; i>=0;i--){
+            if(ar[i] % 5==0){
+                System.out.println(ar[i]);
+            }
         }
 
 
