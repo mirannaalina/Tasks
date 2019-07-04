@@ -1,32 +1,45 @@
 package Tasks;
 
-import com.sun.deploy.util.ArrayUtil;
-
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
+
 
 public class MovieTest {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
 
 
-        BufferedReader buf = new BufferedReader(new FileReader("C:\\Users\\A737860\\Desktop\\New folder\\movies.txt"));
+        File file = new File("C:\\Users\\A737860\\Desktop\\New folder\\movies.txt");
 
-        ArrayList<String> list = new ArrayList<>();
+        BufferedReader br = new BufferedReader(new FileReader(file));
 
-        String line = buf.readLine();
-
-        while (line != null){
-            list.add(line);
-            line =buf.readLine();
+        String st;
+        while ((st = br.readLine()) != null) {
+            System.out.println(st);
         }
 
-        buf.close();
+        String[] tokens = st.split(",");
+        writeFromFileToArray();
 
-
-        //System.out.println(s);
-
+       // if ( )
 
     }
+
+    public static void writeFromFileToArray() {
+
+        try {
+
+            Scanner s = new Scanner(new File("C:\\Users\\A737860\\Desktop\\New folder\\movies.txt"));
+            ArrayList<String> list = new ArrayList<>();
+            while(s.hasNext()){
+                list.add(s.next());
+            }
+            s.close();
+
+
+        } catch(Exception e) {
+            System.out.println("not workin");
+        }
+
+    }
+
 }
