@@ -1,12 +1,13 @@
 package Tasks;
 
-public class Pig {
-    private static Pig ourInstance = new Pig();
+public class Pig implements Animal{
 
-    public static Pig getInstance() {
-        return ourInstance;
+    public void animalSound(){
+        System.out.println("GUITZZZ");
+
+    }
+    public void run(){
+        System.out.println("Fugeee");
     }
 
-    private Pig() {
-    }
 }
